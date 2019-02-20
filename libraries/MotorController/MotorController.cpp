@@ -87,3 +87,9 @@ void MotorController::moveBothWheels(bool forward, int speed)
 	turnWheelA(forward, speed);
 	turnWheelB(forward, speed);
 }
+
+void MotorController::moveWheelsOpposite(bool turnDirection, int speed)
+{
+	turnWheelA(turnDirection, speed);
+	turnWheelB(!turnDirection, speed);
+}
